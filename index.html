@@ -62,6 +62,12 @@ input.nm{width:100%;text-align:start;margin:8px 0}
 .ce{width:58px;padding:7px 2px;font-size:15px}td.en{cursor:pointer;text-decoration:underline dotted var(--mu)}
 .pen{border:0;border-radius:50%;width:38px;height:38px;background:var(--ln);color:var(--tx);font-size:18px;padding:0}.pen.on{background:var(--ac);color:#fff}
 .go{cursor:pointer}.go:active{opacity:.7}
+.epc{margin-inline-start:auto;font-size:12px;color:var(--mu);white-space:nowrap}
+.eps{display:flex;flex-wrap:wrap;gap:6px;padding:8px 4px 2px}
+.ep{width:40px;height:40px;border-radius:10px;border:1px solid var(--ln);background:var(--rb);color:var(--tx);font-size:14px}
+.ep.w1{background:var(--g);border-color:var(--g);color:#fff}
+.epa{display:flex;gap:10px;width:100%;margin-top:2px}
+.bk2{border:0;background:none;color:var(--ac);font-size:13px;text-decoration:underline;padding:6px 2px}
 .acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 .note{font-size:12px;color:var(--mu);margin:6px 2px}
 </style>
@@ -84,13 +90,13 @@ const D={
   {t:'דברים שאני רוצה ללמוד / לעשות',id:'do',i:[['לפתור קובייה הונגרית',1],['לנגן את תוכו רצוף אהבה',1],['לעשות מקבילים',1],['לעשות מתח',1],['לעשות 3 קמ ב־20 דק׳ (ואפילו פחות)',2],['לקלוע לעצמי צמה',1],['להירשם לריצה של 5 קמ',2],['לנקות את כל 2023',1],['ללמוד את לינגר בגיטרה',1],['לסדר את הספוטיפיי',1],['לסדר את השמורים באינסטגרם',0],['לסדר את השמורים בטיקטוק',0],['שכיבות סמיכה',1]]}
  ],
  gaps:[
-  {t:'מארוול / דה דפנדרס',id:'df',i:[['דרדוויל 1',2,715],['ג׳סיקה ג׳ונס 1',2,650],['דרדוויל 2',2,715],['לוק קייג׳ 1',2,715],['איירון פיסט 1',2,650],['דה דפנדרס 1',2,400],['דה פנישר 1',2,715],['ג׳סיקה ג׳ונס 2',2,650],['לוק קייג׳ 2',1,715],['איירון פיסט 2',0,500],['דרדוויל 3',0,715],['דה פנישר 2',0,715],['ג׳סיקה ג׳ונס 3',0,650],['דרדוויל בורן אגיין 1',0,450],['דרדוויל בורן אגיין 2',0,385],['דה פנישר ספיישל',0,50]]},
-  {t:'מארוול פרויקטים',id:'mp',i:[['וונדרמן',1,320]]},
-  {t:'אקס מן',id:'xm',i:[['X-Men',2,104],['X2',2,134],['The Last Stand',2,104],['Wolverine',2,107],['First Class',2,132],['The Wolverine',2,126],['Days of Future Past',2,132],['Deadpool',2,108],['Apocalypse',0,144],['Logan',0,137],['Deadpool 2',0,119],['Dark Phoenix',0,113],['The New Mutants',0,94],['Deadpool & Wolverine',0,128],['97 S1',0,330],['97 S2',0,300]]},
-  {t:'דברים מוזרים',id:'st',i:[['עונה 1',2,415],['עונה 2',2,520],['עונה 3',2,480],['עונה 4',1,810],['עונה 5',0,690]]},
+  {t:'מארוול / דה דפנדרס',id:'df',i:[['דרדוויל 1',2,715,13],['ג׳סיקה ג׳ונס 1',2,650,13],['דרדוויל 2',2,715,13],['לוק קייג׳ 1',2,715,13],['איירון פיסט 1',2,650,13],['דה דפנדרס 1',2,400,8],['דה פנישר 1',2,715,13],['ג׳סיקה ג׳ונס 2',2,650,13],['לוק קייג׳ 2',1,715,13,6],['איירון פיסט 2',0,500,10],['דרדוויל 3',0,715,13],['דה פנישר 2',0,715,13],['ג׳סיקה ג׳ונס 3',0,650,13],['דרדוויל בורן אגיין 1',0,450,9],['דרדוויל בורן אגיין 2',0,385,8],['דה פנישר ספיישל',0,50]]},
+  {t:'מארוול פרויקטים',id:'mp',i:[['וונדרמן',0,320,8]]},
+  {t:'אקס מן',id:'xm',i:[['X-Men',2,104],['X2',2,134],['The Last Stand',2,104],['Wolverine',2,107],['First Class',2,132],['The Wolverine',2,126],['Days of Future Past',2,132],['Deadpool',2,108],['Apocalypse',0,144],['Logan',0,137],['Deadpool 2',0,119],['Dark Phoenix',0,113],['The New Mutants',0,94],['Deadpool & Wolverine',0,128],['97 S1',0,330,10],['97 S2',0,300,9]]},
+  {t:'דברים מוזרים',id:'st',i:[['עונה 1',2,415,8],['עונה 2',2,520,9],['עונה 3',2,480,8],['עונה 4',0,810,9],['עונה 5',0,690,8]]},
   {t:'משחקי הרעב',id:'hg',i:[['1',2,142],['2',0,146],['3',0,123],['4',0,137]]},
   {t:'הארי פוטר',id:'hp',i:[['חלק 1',0,152],['חלק 2',0,161],['חלק 3',0,142],['חלק 4',0,157],['חלק 5',0,138],['חלק 6',0,153],['חלק 7',0,146],['חלק 8',0,130]]},
-  {t:'טהרן',id:'th',i:[['עונה 1',2,320],['עונה 2',2,320],['עונה 3',2,320]]},
+  {t:'טהרן',id:'th',i:[['עונה 1',2,320,8],['עונה 2',2,320,8],['עונה 3',2,320,8]]},
   {t:'ליאור',id:'li',i:[['ריקוד מושחת (סרט)',2,100],['צלילי המוזיקה (סרט)',2,174],['אליס בארץ הפלאות (סרט)',2,108],['סולם גנבים (ספר)',2]]},
   {t:'ספרים',id:'bk',i:[['ספר של גיל',1],['2 ספרים לבחירתי מהספרייה',2]]}
  ],
@@ -115,13 +121,20 @@ const rowCur=(k)=>{const vs=gM().map(m=>m.v[k]),f=vs.find(x=>x!=null),c=[...vs].
 const monthCode={r:0,y:1,g:2,n:3};
 const pv=(y,m)=>st('ph',y+'-'+m,monthCode[D.photos[y][m]]);
 const el=(h)=>{const d=document.createElement('div');d.innerHTML=h;return d.firstElementChild};
-const secs=(g)=>g.map(x=>({...x,v:x.i.map(([n,s],k)=>st(x.id,k,s))}));
+const epArr=(id,k,it)=>{const a=S['ep.'+id+'.'+k];if(Array.isArray(a)&&a.length==it[3])return a;const base=S[id+'.'+k]!==undefined?S[id+'.'+k]:it[1];const w=base==2?it[3]:(it[4]||0);return Array.from({length:it[3]},(_,i)=>i<w?1:0)};
+const itSt=(x,k)=>{const it=x.i[k];if(!it[3])return st(x.id,k,it[1]);const a=epArr(x.id,k,it),n=a.reduce((p,c)=>p+c,0);return n==a.length?2:n?1:0};
+const secs=(g)=>g.map(x=>{const v=x.i.map((it,k)=>itSt(x,k));const u=x.i.flatMap((it,k)=>it[3]?epArr(x.id,k,it).map(w=>w?2:0):[v[k]]);return {...x,v,u}});
+const EX=new Set();
 const bar=(a)=>{const n=a.length,g=a.filter(v=>v==2).length,y=a.filter(v=>v==1).length;return `<div class="bar"><i class="bg" style="width:${g/n*100}%"></i><i class="by" style="width:${y/n*100}%"></i></div>`};
 const pstat=(a)=>{const g=a.filter(v=>v==2).length,n=a.length,p=n?Math.round(g/n*100):0;return{g,n,p,done:n>0&&g==n}};
 const cnt=(a)=>{const{g,n,p,done}=pstat(a);return `${g}/${n} · <span class="pctnum${done?" done":""}">${p}%${done?" ✓":""}</span>`};
 const legend='<div class="legend"><span><i class="dot" style="background:var(--r)"></i>לא התחלתי</span><span><i class="dot" style="background:var(--y)"></i>בתהליך</span><span><i class="dot" style="background:var(--g)"></i>הושלם</span></div>';
 function list(g,leg){
-  return secs(g).map(x=>`<div class="card${pstat(x.v).done?" done":""}"><h2 data-open="${x.id}" style="cursor:pointer">${x.t}<span class="pct">${cnt(x.v)} ${OP.has(x.id)?'▴':'▾'}</span></h2>${bar(x.v)}${!OP.has(x.id)?'':x.i.map(([n],k)=>`<button class="it s${x.v[k]}" data-id="${x.id}" data-k="${k}"><i class="m">${x.v[k]==2?'✓':''}</i><span>${n}</span></button>`).join('')}</div>`).join('');
+  return secs(g).map(x=>`<div class="card${pstat(x.u).done?" done":""}"><h2 data-open="${x.id}" style="cursor:pointer">${x.t}<span class="pct">${cnt(x.u)} ${OP.has(x.id)?'▴':'▾'}</span></h2>${bar(x.u)}${!OP.has(x.id)?'':x.i.map((it,k)=>{
+    if(!it[3])return `<button class="it s${x.v[k]}" data-id="${x.id}" data-k="${k}"><i class="m">${x.v[k]==2?'✓':''}</i><span>${it[0]}</span></button>`;
+    const a=epArr(x.id,k,it),n=a.reduce((p,c)=>p+c,0),key=x.id+'|'+k,open=EX.has(key);
+    return `<button class="it s${x.v[k]}" data-ex="${key}"><i class="m">${x.v[k]==2?'✓':''}</i><span>${it[0]}</span><span class="epc">${n}/${it[3]} ${open?'▴':'▾'}</span></button>`+(open?`<div class="eps">${a.map((w,e)=>`<button class="ep w${w}" data-ep="${key}|${e}">${e+1}</button>`).join('')}<div class="epa"><button class="bk2" data-epa="${key}|1">סמן הכל</button><button class="bk2" data-epa="${key}|0">נקה</button></div></div>`:'');
+  }).join('')}</div>`).join('');
 }
 let tab='home';
 const DAYN=['יום א׳','יום ב׳','יום ג׳','יום ד׳','יום ה׳','יום ו׳','שבת'];
@@ -130,7 +143,7 @@ const today=new Date();
 const dateStr=DAYN[today.getDay()]+', '+today.getDate()+' ב'+MN[today.getMonth()];
 const tabs=[['home','🏠','סקירה'],['goals','🎯','מטרות'],['gaps','🎬','צפייה'],['coll','💿','אוספים'],['photos','📷','תמונות'],['gym','🏋️','כושר']];
 function allVals(){
-  const a=[...secs(D.goals),...secs(D.gaps),...secs(D.coll)].flatMap(x=>x.v);
+  const a=[...secs(D.goals),...secs(D.gaps),...secs(D.coll)].flatMap(x=>x.u);
   const p=[];for(const y in D.photos)for(let m=0;m<12;m++){const v=pv(y,m);if(v<3)p.push(v)}
   return {a,p};
 }
@@ -144,12 +157,12 @@ function render(){
   const app=document.getElementById('app');let h='';
   if(tab=='home'){
     const rows=[['🎯 מטרות',secs(D.goals),'goals'],['🎬 חורים בהשכלה',secs(D.gaps),'gaps'],['💿 אוספים',secs(D.coll),'coll']];
-    h=rows.map(([t,s,k])=>{const v=s.flatMap(x=>x.v);return `<div class="card go${pstat(v).done?" done":""}" data-tab="${k}"><h2>${t}<span class="pct">${cnt(v)} ‹</span></h2>${bar(v)}</div>`}).join('');
+    h=rows.map(([t,s,k])=>{const v=s.flatMap(x=>x.u);return `<div class="card go${pstat(v).done?" done":""}" data-tab="${k}"><h2>${t}<span class="pct">${cnt(v)} ‹</span></h2>${bar(v)}</div>`}).join('');
     h+=`<div class="card go${pstat(p).done?" done":""}" data-tab="photos"><h2>📷 גיבוי תמונות<span class="pct">${cnt(p)} ‹</span></h2>${bar(p)}</div>`;
   }
   if(tab=='goals')h=legend+list(D.goals);
   if(tab=='gaps'){
-    let rem=0;secs(D.gaps).forEach(x=>x.i.forEach((it,k)=>{if(it[2]&&x.v[k]!=2)rem+=it[2]}));
+    let rem=0;secs(D.gaps).forEach(x=>x.i.forEach((it,k)=>{if(!it[2])return;if(it[3]){const a=epArr(x.id,k,it);rem+=it[2]/it[3]*a.filter(w=>!w).length}else if(x.v[k]!=2)rem+=it[2]}));
     const t0=new Date();t0.setHours(0,0,0,0);const days=Math.round((new Date(t0.getFullYear(),11,31)-t0)/864e5)+1;
     const f=(m)=>{m=Math.round(m);const h=Math.floor(m/60),r=m%60;return h?`${h} ש׳ ${r} ד׳`:`${r} ד׳`};
     h=`<div class="card${rem==0?' done':''}" style="text-align:center"><div class="sub">קצב צפייה יומי נדרש</div><div style="font-size:30px;font-weight:700;margin:6px 0;color:var(--ac)">${rem==0?'סיימת הכל 🎉':days<1?'—':f(rem/days)}</div><div class="sub">${rem==0?'':`נותרו ${f(rem)} · ${Math.max(days,0)} ימים עד 31.12`}</div></div>`+legend+list(D.gaps);
@@ -174,11 +187,15 @@ function render(){
   app.innerHTML=h;
 }
 document.addEventListener('click',e=>{
-  const t=e.target.closest('[data-tab],[data-id],[data-ph],[data-g],[data-gm],[data-ek],[data-open]');if(!t)return;
+  const t=e.target.closest('[data-tab],[data-id],[data-ph],[data-g],[data-gm],[data-ek],[data-open],[data-ex],[data-ep],[data-epa]');if(!t)return;
   const pcf=cf;cf=null;
   if(t.dataset.tab){exIn=false;tab=t.dataset.tab;exEd=null;render();scrollTo(0,0);return}
   if(t.dataset.id){const {id,k}=t.dataset;const cur=+t.className.match(/s(\d)/)[1];S[id+'.'+k]=(cur+1)%3;}
   if(t.dataset.ph){const [y,m]=t.dataset.ph.split('-');const cur=pv(y,+m);S['ph.'+t.dataset.ph]=(cur+1)%4;}
+  const itemOf=(key)=>{const [id,k]=key.split('|');const x=D.gaps.find(g=>g.id==id);return {id,k:+k,it:x.i[+k]}};
+  if(t.dataset.ex){const key=t.dataset.ex;EX.has(key)?EX.delete(key):EX.add(key);const y=scrollY;render();scrollTo(0,y);return}
+  if(t.dataset.ep){const [id,k,e]=t.dataset.ep.split('|');const {it}=itemOf(id+'|'+k);const a=[...epArr(id,+k,it)];a[+e]=a[+e]?0:1;S['ep.'+id+'.'+k]=a;save();const y=scrollY;render();scrollTo(0,y);return}
+  if(t.dataset.epa){const [id,k,f]=t.dataset.epa.split('|');const {it}=itemOf(id+'|'+k);S['ep.'+id+'.'+k]=Array.from({length:it[3]},()=>+f);save();const y=scrollY;render();scrollTo(0,y);return}
   if(t.dataset.open){const o=t.dataset.open;OP.has(o)?OP.delete(o):OP.add(o);const y=scrollY;render();scrollTo(0,y);return}
   if(t.dataset.ek!==undefined){exIn=false;const k=+t.dataset.ek;exEd={k,n:gE()[k]};render();scrollTo(0,0);return}
   if(t.dataset.gm!==undefined){const i=+t.dataset.gm,m=gM()[i];ed={i,n:m.n,v:[...m.v]};render();scrollTo(0,0);return}
